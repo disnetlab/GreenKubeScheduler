@@ -1,0 +1,61 @@
+7Day:
+Mean Squared Error (MSE): 0.007616588528843667
+Root Mean Squared Error (RMSE): 0.08727306874886243
+Mean Absolute Error (MAE): 0.04536775254611216
+
+14Day:
+Mean Squared Error (MSE): 0.007374492713012732
+Root Mean Squared Error (RMSE): 0.08587486659676818
+Mean Absolute Error (MAE): 0.04143739767960459
+
+
+28Day:
+Mean Squared Error (MSE): 0.008233543518118723
+Root Mean Squared Error (RMSE): 0.09073887545103655
+Mean Absolute Error (MAE): 0.04447886790640914
+
+
+21Day:
+Mean Squared Error (MSE): 0.007762929423110326
+Root Mean Squared Error (RMSE): 0.08810748789467514
+Mean Absolute Error (MAE): 0.04366745816251607
+
+
+18Day:
+Mean Squared Error (MSE): 0.007762929423110326
+Root Mean Squared Error (RMSE): 0.08810748789467514
+Mean Absolute Error (MAE): 0.04366745816251607
+
+
+10Day:
+Mean Squared Error (MSE): 0.007282950472646485
+Root Mean Squared Error (RMSE): 0.08534020431570624
+Mean Absolute Error (MAE): 0.04193727037399634
+
+
+12Day
+Mean Squared Error (MSE): 0.007391519646808716
+Root Mean Squared Error (RMSE): 0.08597394748881033
+Mean Absolute Error (MAE): 0.041434373109112306
+
+
+11Day
+Mean Squared Error (MSE): 0.007160127280347881
+Root Mean Squared Error (RMSE): 0.0846175353005976
+Mean Absolute Error (MAE): 0.04207874969405862
+
+is the best
+lowest MSE and RMSE
+
+
+
+60Day
+Mean Squared Error (MSE): 0.008623191395246714
+Root Mean Squared Error (RMSE): 0.09286114039385213
+Mean Absolute Error (MAE): 0.04522713300631599
+
+
+9Day
+Mean Squared Error (MSE): 0.007585864772087462
+Root Mean Squared Error (RMSE): 0.08709687004759391
+Mean Absolute Error (MAE): 0.04493876103088648
