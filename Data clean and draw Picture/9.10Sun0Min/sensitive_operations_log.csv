@@ -1,0 +1,17 @@
+timestamp,operation
+2024-09-17 02:13:30,Wake Up compute2
+2024-09-17 02:20:41,Uncordon compute2
+2024-09-17 02:20:47,Wake Up compute5
+2024-09-17 02:27:58,Uncordon compute5
+2024-09-17 02:28:03,Wake Up compute6
+2024-09-17 02:35:15,Uncordon compute6
+2024-09-17 02:35:20,Wake Up compute7
+2024-09-17 02:42:32,Uncordon compute7
+2024-09-17 03:43:24,Drain compute7
+2024-09-17 03:45:37,Shutdown compute7
+2024-09-17 03:48:22,Drain compute6
+2024-09-17 03:50:33,Shutdown compute6
+2024-09-17 03:53:22,Drain compute5
+2024-09-17 03:55:34,Shutdown compute5
+2024-09-17 03:58:21,Drain compute2
+2024-09-17 04:00:33,Shutdown compute2

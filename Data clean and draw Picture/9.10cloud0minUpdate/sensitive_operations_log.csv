@@ -1,0 +1,48 @@
+timestamp,operation
+2024-09-20 03:47:03,Wake Up compute2
+2024-09-20 03:54:14,Uncordon compute2
+2024-09-20 03:54:20,Wake Up compute5
+2024-09-20 04:01:31,Uncordon compute5
+2024-09-20 04:01:36,Wake Up compute6
+2024-09-20 04:08:48,Uncordon compute6
+2024-09-20 04:08:53,Wake Up compute7
+2024-09-20 04:16:05,Uncordon compute7
+2024-09-20 04:24:51,Drain compute7
+2024-09-20 04:26:31,Shutdown compute7
+2024-09-20 04:28:57,Wake Up compute7
+2024-09-20 04:36:09,Uncordon compute7
+2024-09-20 04:47:14,Drain compute7
+2024-09-20 04:49:26,Shutdown compute7
+2024-09-20 04:52:13,Drain compute6
+2024-09-20 04:54:25,Shutdown compute6
+2024-09-20 04:56:51,Wake Up compute6
+2024-09-20 05:04:03,Uncordon compute6
+2024-09-20 05:04:08,Wake Up compute7
+2024-09-20 05:11:20,Uncordon compute7
+2024-09-20 05:16:19,Drain compute7
+2024-09-20 05:17:59,Shutdown compute7
+2024-09-20 05:20:47,Drain compute6
+2024-09-20 05:22:58,Shutdown compute6
+2024-09-20 05:25:46,Drain compute5
+2024-09-20 05:27:58,Shutdown compute5
+2024-09-20 05:30:58,Wake Up compute5
+2024-09-20 05:38:09,Uncordon compute5
+2024-09-20 05:39:48,Drain compute5
+2024-09-20 05:42:01,Shutdown compute5
+2024-09-20 05:44:48,Drain compute2
+2024-09-20 05:47:01,Shutdown compute2
+2024-09-20 09:47:05,Wake Up compute2
+2024-09-20 09:54:16,Uncordon compute2
+2024-09-20 09:54:22,Wake Up compute5
+2024-09-20 10:01:33,Uncordon compute5
+2024-09-20 10:01:38,Wake Up compute6
+2024-09-20 10:08:50,Uncordon compute6
+2024-09-20 10:08:55,Wake Up compute7
+2024-09-20 10:16:07,Uncordon compute7
+2024-09-20 10:24:55,Drain compute7
+2024-09-20 10:26:35,Shutdown compute7
+2024-09-20 10:29:34,Wake Up compute7
+2024-09-20 10:36:46,Uncordon compute7
+2024-09-20 10:47:17,Drain compute7
+2024-09-20 10:48:57,Shutdown compute7
+2024-09-20 10:51:45,Drain compute6
