@@ -6,7 +6,7 @@ This repository contains various components and scripts essential for the GreenK
 
 - **scheduler**: Contains the core scheduling plugin program for the scheduler. This is where the main logic of the scheduler is implemented.
 
-- **prediction**: Includes files related to solar energy prediction. These files are used for forecasting solar power availability, which is crucial for optimizing the scheduler’s performance.
+- **prediction**: Includes files related to solar energy prediction. These files are used for forecasting solar power availability.
 
 - **Other server script**: This directory contains several automated key service scripts essential for the system's operations.
 
