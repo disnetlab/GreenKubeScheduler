@@ -1,0 +1,16 @@
+apiVersion: kubescheduler.config.k8s.io/v1
+kind: KubeSchedulerConfiguration
+leaderElection:
+  leaderElect: true
+clientConnection:
+  kubeconfig: /etc/kubernetes/scheduler.conf
+profiles:
+- schedulerName: default-scheduler
+  plugins:
+    permit:
+      disabled:
+      - name: EnergyAwareScheduling
+    filter:
+      disabled:
+      - name: EnergyAwareFilter
+      - name: ResourceLimitsFilter

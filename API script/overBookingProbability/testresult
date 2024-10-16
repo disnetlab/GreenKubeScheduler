@@ -1,0 +1,40 @@
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/276205609451
+{"collection_id":276205609451,"cpus_request":0.0081024169921875,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/276205682817
+{"collection_id":276205682817,"cpus_request":0.0119781494140625,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/282763093511
+{"collection_id":282763093511,"cpus_request":0.0040512084960937,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/284994285376
+{"collection_id":284994285376,"cpus_request":0.0020256042480468,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/285756932049
+{"collection_id":285756932049,"cpus_request":0.0020256042480468,"exceedance_probability":0.18181818181818182}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/286707440750
+{"collection_id":286707440750,"cpus_request":0.0016899108886718,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/286893948098
+{"collection_id":286893948098,"cpus_request":0.0020256042480468,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/286904951031
+{"collection_id":286904951031,"cpus_request":0.0026397705078125,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/298867645323
+{"collection_id":298867645323,"cpus_request":0.0037879943847656,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/299996111841
+{"collection_id":299996111841,"cpus_request":0.0056686401367187,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/301065336856
+{"collection_id":301065336856,"cpus_request":0.03240966796875,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/286501394514
+{"collection_id":286501394514,"cpus_request":0.0,"exceedance_probability":0.7272727272727273}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/278313461002
+{"collection_id":278313461002,"cpus_request":0.0040512084960937,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/279253711324
+{"collection_id":279253711324,"cpus_request":0.0073089599609375,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/285606169490
+{"collection_id":285606169490,"cpus_request":0.0039596557617187,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/285651484130
+{"collection_id":285651484130,"cpus_request":0.0011005401611328,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/286860850513
+{"collection_id":286860850513,"cpus_request":0.0648193359375,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/286898147618
+{"collection_id":286898147618,"cpus_request":0.0087127685546875,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/298311908301
+{"collection_id":298311908301,"cpus_request":0.0335693359375,"exceedance_probability":0.0}
+suenyvan@SuenYvans-MacBook-Pro ~ % curl 127.0.0.1:6186/300543077456
+{"collection_id":300543077456,"cpus_request":0.0028190612792968,"exceedance_probability":0.0}

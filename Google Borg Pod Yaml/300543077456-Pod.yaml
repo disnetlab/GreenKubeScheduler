@@ -1,0 +1,76 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "300543077456"
+  namespace: default
+  labels:
+    priority: "2"
+    servicesID: "300543077456"
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: testenv
+    image: yifan6185/testenv1:latest
+    command: ["/bin/bash", "-c"]
+    args:
+    - |
+      # Get a random CPU workload based on weight
+      function get_weighted_random_cpu_load {
+        # CPU usage distribution percentiles (CDF)
+        cpu_loads=(0.002471923828125 0.002471923828125 0.002471923828125 0.002471923828125 0.002471923828125 0.0538330078125 0.1051025390625 0.1051025390625 0.1051025390625 0.1051025390625 0.1051025390625)
+        percentiles=(0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0)
+
+        # Generate a random number between 0 and 1
+        random=$(awk -v seed=$RANDOM 'BEGIN{srand(seed); print rand()}')
+        # Find the corresponding CPU load based on the random number using interpolation
+        for i in "${!percentiles[@]}"; do
+          if (( $(echo "$random <= ${percentiles[$i]}" | bc -l) )); then
+              if [ $i -eq 0 ]; then
+                echo "${cpu_loads[0]}"
+                return
+              fi
+              x0=${percentiles[$i-1]}
+              x1=${percentiles[$i]}
+              y0=${cpu_loads[$i-1]}
+              y1=${cpu_loads[$i]}
+              cpu_load=$(echo "scale=10; $y0 + ($random - $x0) * ($y1 - $y0) / ($x1 - $x0)" | bc -l)
+              printf "%.15f\n" "$cpu_load"
+              return
+          fi
+        done
+      }
+
+      # set total time and every running time
+      total_time=10.468355
+      interval=30
+      end_time=$(date -ud "$total_time seconds" +%s)
+
+      # start workload
+      while [[ $(date -u +%s) -le $end_time ]]; do
+          current_time=$(date -u +%s)
+          remaining_time=$((end_time - current_time))
+
+          if ((remaining_time < interval)); then
+              interval=$remaining_time
+          fi
+
+          cpu_load=$(get_weighted_random_cpu_load)
+          echo "Applying CPU load: $cpu_load for $interval seconds"
+
+          # calculate stress-ng parameters
+          cpu_cores=$(echo "$cpu_load" | awk '{print int($1+1)}')
+          load_per_core=$(echo "scale=0; ($cpu_load * 100) / $cpu_cores" | bc -l)
+
+          stress-ng --cpu $cpu_cores --cpu-load $load_per_core --timeout $interval
+
+          if ((remaining_time <= interval)); then
+              break
+          fi
+      done
+    resources:
+      requests:
+        cpu: "0.270629883"
+        memory: "1445Mi"
+      limits:
+        cpu: "1.035644531"
+        memory: "1445Mi"

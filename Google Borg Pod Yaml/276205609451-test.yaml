@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "276205609451test"
+  namespace: default
+  labels:
+    priority: "1"
+    servicesID: "276205609451"
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: testenv
+    image: yifan6185/testenv1:latest
+    command: ["/bin/bash", "-c"]
+    args:
+    - |
+      # 定义一个函数用于获取随机的CPU负载
+      function get_random_cpu_load {
+          # 定义 CPU 使用率分布
+          cpu_loads=(0.002471923828125 0.002471923828125 0.002471923828125 0.002471923828125 0.002471923828125 0.0538330078125 0.1051025390625 0.1051025390625 0.1051025390625 0.1051025390625 0.1051025390625)
+          # 生成随机数并选择相应的 CPU 负载
+          random_index=$(shuf -i 0-10 -n 1)
+          echo ${cpu_loads[$random_index]}
+      }
+
+      # 设置总的运行时间和每次运行的时间间隔
+      total_time=165.62
+      interval=30
+      end_time=$(date -ud "$total_time seconds" +%s)
+
+      # 在总时间内不断施加CPU负载
+      while [[ $(date -u +%s) -le $end_time ]]; do
+          current_time=$(date -u +%s)
+          remaining_time=$((end_time - current_time))
+
+          if ((remaining_time < interval)); then
+              interval=$remaining_time
+          fi
+
+          cpu_load=$(get_random_cpu_load)
+          echo "Applying CPU load: $cpu_load for $interval seconds"
+
+          # 计算需要使用的CPU核数和每个核的负载
+          cpu_cores=$(echo "$cpu_load" | awk '{print int($1+1)}')
+          load_per_core=$(echo "scale=0; ($cpu_load * 100) / $cpu_cores" | bc -l)
+
+          stress-ng --cpu $cpu_cores --cpu-load $load_per_core --timeout $interval
+
+          if ((remaining_time <= interval)); then
+              break
+          fi
+      done
+    resources:
+      requests:
+        cpu: "778m"
+        memory: "1333Mi"
+      limits:
+        cpu: "3778m"
+        memory: "1333Mi"
+

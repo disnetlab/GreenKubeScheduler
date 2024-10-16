@@ -1,0 +1,16 @@
+[Unit]
+Description=Prometheus Container
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker stop prometheus0
+ExecStartPre=-/usr/bin/docker rm prometheus0
+ExecStartPre=/usr/bin/docker pull prom/prometheus
+ExecStart=/usr/bin/docker run --rm -p 9090:9090 -v /etc/prometheus:/etc/prometheus --name prometheus0 prom/prometheus
+
+[Install]
+WantedBy=multi-user.target
+	
