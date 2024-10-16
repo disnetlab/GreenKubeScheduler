@@ -1,6 +1,14 @@
 # GreenKubeScheduler
 
-This repository contains various components and scripts essential for the GreenKubeScheduler project. Below is an overview of each directory and file in the project:
+This repository contains various components and scripts essential for the GreenKubeScheduler project. 
+
+9 Kubernetes core scheduling plugin Golang program files
+
+5 Linux server Bash shell experiment run control scripts
+
+171 Python other scripts
+
+Below is an overview of each directory and file in the project:
 
 ## Directories
 
