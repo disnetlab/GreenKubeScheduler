@@ -1,4 +1,4 @@
-# GreenKubeScheduler
+# GreenK8s
 
 This repository contains various components and scripts essential for the GreenKubeScheduler project. 
 
