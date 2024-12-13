@@ -1,6 +1,6 @@
 # GreenK8s
 
-This repository contains various components and scripts essential for the GreenKubeScheduler project. 
+This repository contains various components and scripts essential for the GreenK8s project. 
 
 9 Kubernetes core scheduling plugin Golang program files
 
